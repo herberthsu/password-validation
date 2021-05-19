@@ -51,6 +51,6 @@ Packages
 ### To do
 
 - [x] Add Error Response Model
-- [ ] Add Logging
+- [x] Add Logging
 - [ ] Add "Sequence of characters" validation rule
 - [ ] Add "Sequence of characters" validation rule test

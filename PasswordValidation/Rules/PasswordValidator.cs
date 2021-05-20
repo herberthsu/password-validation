@@ -11,6 +11,7 @@ namespace PasswordValidation.Rules
             Add("LowercaseLetterOnly", new Rule<string>(new LowercaseLettersOnly(), "Password should not contain any uppercase letter"));
             Add("LengthMinimumFiveMaximumTwelve", new Rule<string>(new LengthMinimumFiveMaximumTwelve(), "Password Length should be between 5 and 12"));
             Add("ContainsUnnecessaryCharacter", new Rule<string>(new NonSpecialCharacters(), "Password should not contain any non-digit and non-letter character"));
+            Add("NotFollowBySameSequenceOfCharacters", new Rule<string>(new NotFollowBySameSequenceOfCharacters(), "Password should not contain any sequence of characters"));
         }
     }
 }

@@ -35,7 +35,7 @@ GET /validate?password=string
 | 3        	| LowercaseLetterOnly            	| Password should not contain any uppercase letter                   	|
 | 4        	| LengthMinimumFiveMaximumTwelve 	| Password Length should be between 5 and 12                         	|
 | 5        	| ContainsUnnecessaryCharacter   	| Password should not contain any non-digit and non-letter character 	|
-| 6        	| TBD                            	| Password should not contain any sequence of characters             	|
+| 6        	| NotFollowBySameSequenceOfCharacters| Password should not contain any sequence of characters             	|
 
 ### Technologies
 ---
@@ -52,5 +52,5 @@ Packages
 
 - [x] Add Error Response Model
 - [x] Add Logging
-- [ ] Add "Sequence of characters" validation rule
-- [ ] Add "Sequence of characters" validation rule test
+- [x] Add "Sequence of characters" validation rule
+- [x] Add "Sequence of characters" validation rule test

@@ -43,7 +43,7 @@ namespace PasswordValidationTests
         [Fact]
         public void Password_Does_Only_Have_One_Letter_Should_Be_Valid()
         {
-            var actualResult = _hasAtLeastOneLetterSpecification.IsSatisfiedBy("abc1def");
+            var actualResult = _hasAtLeastOneLetterSpecification.IsSatisfiedBy("123a456");
             actualResult.Should().BeTrue();
         }
     }

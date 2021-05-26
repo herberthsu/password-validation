@@ -19,7 +19,7 @@ namespace PasswordValidationTests
         /// expect: pass
         /// </summary>
         [Fact]
-        public void Password_Length_Is_Five_Should_Be_Valid()
+        public void Password_Length_Is_Exact_Five_Should_Be_Valid()
         {
             var actualResult = _lengthMinimumFiveMaximumTwelveSpecification.IsSatisfiedBy("word1");
             actualResult.Should().BeTrue();
@@ -30,7 +30,7 @@ namespace PasswordValidationTests
         /// expect: pass
         /// </summary>
         [Fact]
-        public void Password_Length_Is_Twelve_Should_Be_Valid()
+        public void Password_Length_Is_Exact_Twelve_Should_Be_Valid()
         {
             var actualResult = _lengthMinimumFiveMaximumTwelveSpecification.IsSatisfiedBy("password1234");
             actualResult.Should().BeTrue();

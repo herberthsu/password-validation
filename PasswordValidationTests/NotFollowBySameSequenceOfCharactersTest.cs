@@ -15,87 +15,57 @@ namespace PasswordValidationTests
         }
         
         /// <summary>
-        /// data: passpass
+        /// password: passpass
         /// expect: fail
         /// </summary>
         [Fact]
-        public void TestCase1()
+        public void Password_Passpass_Should_Be_Invalid()
         {
-            // arrange
-            var data = "passpass";
-
-            // act
-            var actualResult = _notFollowBySameSequenceOfCharactersSpecification.IsSatisfiedBy(data);
-
-            // assert
+            var actualResult = _notFollowBySameSequenceOfCharactersSpecification.IsSatisfiedBy("passpass");
             actualResult.Should().BeFalse();
         }
         
         /// <summary>
-        /// data: 1234512345
+        /// password: 1234512345
         /// expect: fail
         /// </summary>
         [Fact]
-        public void TestCase2()
+        public void Password_1234512345_Should_Be_Invalid()
         {
-            // arrange
-            var data = "1234512345";
-
-            // act
-            var actualResult = _notFollowBySameSequenceOfCharactersSpecification.IsSatisfiedBy(data);
-
-            // assert
+            var actualResult = _notFollowBySameSequenceOfCharactersSpecification.IsSatisfiedBy("1234512345");
             actualResult.Should().BeFalse();
         }
         
         /// <summary>
-        /// data: pass1pass
+        /// password: pass1pass
         /// expect: pass
         /// </summary>
         [Fact]
-        public void TestCase3()
+        public void Password_Pass1pass_Should_Be_Valid()
         {
-            // arrange
-            var data = "pass1pass";
-
-            // act
-            var actualResult = _notFollowBySameSequenceOfCharactersSpecification.IsSatisfiedBy(data);
-
-            // assert
+            var actualResult = _notFollowBySameSequenceOfCharactersSpecification.IsSatisfiedBy("pass1pass");
             actualResult.Should().BeTrue();
         }
         
         /// <summary>
-        /// data: 123a123123
+        /// password: 123a123123
         /// expect: fail
         /// </summary>
         [Fact]
-        public void TestCase4()
+        public void Password_123a123123_Should_Be_Invalid()
         {
-            // arrange
-            var data = "123a123123";
-
-            // act
-            var actualResult = _notFollowBySameSequenceOfCharactersSpecification.IsSatisfiedBy(data);
-
-            // assert
+            var actualResult = _notFollowBySameSequenceOfCharactersSpecification.IsSatisfiedBy("123a123123");
             actualResult.Should().BeFalse();
         }
         
         /// <summary>
-        /// data: 20200500
+        /// password: 20200500
         /// expect: fail
         /// </summary>
         [Fact]
-        public void TestCase5()
+        public void Password_20200500_Should_Be_Invalid()
         {
-            // arrange
-            var data = "20200500";
-
-            // act
-            var actualResult = _notFollowBySameSequenceOfCharactersSpecification.IsSatisfiedBy(data);
-
-            // assert
+            var actualResult = _notFollowBySameSequenceOfCharactersSpecification.IsSatisfiedBy("20200500");
             actualResult.Should().BeFalse();
         }
     }

@@ -35,11 +35,11 @@ namespace PasswordValidation.Controllers
             
                 _logger.LogInformation($"Password: {password} | Type: {result.Type} | Message: {result.Message}");
             
-                return Conflict(new ResponseErrorModel
+                return Ok(new ResponseErrorModel
                 {
                     Error = new ErrorModel
                     {
-                        Code = (int) HttpStatusCode.Conflict,
+                        Code = (int) HttpStatusCode.BadRequest,
                         Type = result.Type,
                         Message = result.Message
                     }

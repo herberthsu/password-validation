@@ -19,7 +19,7 @@ namespace PasswordValidationTests
         /// expect: fail
         /// </summary>
         [Fact]
-        public void Password_Doesnt_Have_Any_Digit_Character_Should_Be_Invalid()
+        public void Password_Doesnt_Have_Any_Digit_Should_Be_Invalid()
         {
             var actualResult = _hasAtLeastOneDigitSpecification.IsSatisfiedBy("abcdef");
             actualResult.Should().BeFalse();
@@ -30,7 +30,7 @@ namespace PasswordValidationTests
         /// expect: pass
         /// </summary>
         [Fact]
-        public void Password_Does_Have_Multiple_Digit_Characters_Should_Be_Valid()
+        public void Password_Does_Have_Multiple_Digit_Should_Be_Valid()
         {
             var actualResult = _hasAtLeastOneDigitSpecification.IsSatisfiedBy("abc123def");
             actualResult.Should().BeTrue();
@@ -41,7 +41,7 @@ namespace PasswordValidationTests
         /// expect: pass
         /// </summary>
         [Fact]
-        public void Password_Does_Only_Have_One_Digit_Character_Should_Be_Valid()
+        public void Password_Does_Only_Have_One_Digit_Should_Be_Valid()
         {
             var actualResult = _hasAtLeastOneDigitSpecification.IsSatisfiedBy("abc1def");
             actualResult.Should().BeTrue();

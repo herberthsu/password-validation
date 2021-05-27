@@ -37,12 +37,7 @@ namespace PasswordValidation.Controllers
             
                 return Ok(new ResponseErrorModel
                 {
-                    Error = new ErrorModel
-                    {
-                        Code = (int) HttpStatusCode.BadRequest,
-                        Type = result.Type,
-                        Message = result.Message
-                    }
+                    Error = new ErrorModel(result.Type, result.Message)
                 });
             }
             catch (Exception e)

@@ -20,7 +20,6 @@ namespace PasswordValidation.Rules
                 if (!rule.Value.Validate(entity))
                 {
                     validation.SetError(new ValidationError(rule.Key, rule.Value.ErrorMessage));
-                    break;
                 }
             }
 

@@ -1,6 +1,6 @@
 ﻿namespace PasswordValidation.Rules
 {
-    public class ValidationError
+    public struct ValidationError
     {
         public string Type { get; }
         public string Message { get; }

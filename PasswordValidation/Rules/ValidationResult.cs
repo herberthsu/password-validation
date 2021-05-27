@@ -1,22 +1,30 @@
-﻿namespace PasswordValidation.Rules
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace PasswordValidation.Rules
 {
     public class ValidationResult
     {
-        public string Message { get; set; }
-        public string Type { get; set; }
+        public string Message => Errors.Any()
+            ? Errors.Select(error => error.Message).Aggregate((current, next) => current + "," + next)
+            : string.Empty;
 
-        public bool IsValid { get; private set; }
-        
+        public string Type => Errors.Any()
+            ? Errors.Select(error => error.Type).Aggregate((current, next) => current + "," + next)
+            : string.Empty;
+
+        public List<ValidationError> Errors { get; }
+
+        public bool IsValid => !Errors.Any();
+
         public ValidationResult()
         {
-            IsValid = true;
+            Errors = new List<ValidationError>();
         }
         
         public void SetError(ValidationError error)
         {
-            IsValid = false;
-            Type = error.Type;
-            Message = error.Message;
+            Errors.Add(error);
         }
     }
 }

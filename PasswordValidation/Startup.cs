@@ -36,9 +36,11 @@ namespace PasswordValidation
             
             // Specifications
             services.AddTransient<IHasAtLeastOneDigit, HasAtLeastOneDigit>();
-            
+            services.AddTransient<IHasAtLeastOneLetter, HasAtLeastOneLetter>();
+
             // Rules
             services.AddTransient<IHasAtLeastOneDigitRule, HasAtLeastOneDigitRule>();
+            services.AddTransient<IHasAtLeastOneLetterRule, HasAtLeastOneLetterRule>();
 
             // Validator
             services.AddTransient<IValidator<string>, PasswordValidator>();

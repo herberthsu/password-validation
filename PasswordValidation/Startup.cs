@@ -5,7 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PasswordValidation.Rules;
+using PasswordValidation.Rules.Implementations;
 using PasswordValidation.Rules.Interfaces;
+using PasswordValidation.Specifications.Implementation;
+using PasswordValidation.Specifications.Interfaces;
 
 namespace PasswordValidation
 {
@@ -28,6 +31,16 @@ namespace PasswordValidation
                 config.ReportApiVersions = true;
             });
             services.AddControllers();
+            
+            // add dependency injections here
+            
+            // Specifications
+            services.AddTransient<IHasAtLeastOneDigit, HasAtLeastOneDigit>();
+            
+            // Rules
+            services.AddTransient<IHasAtLeastOneDigitRule, HasAtLeastOneDigitRule>();
+
+            // Validator
             services.AddTransient<IValidator<string>, PasswordValidator>();
         }
 

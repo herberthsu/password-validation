@@ -9,14 +9,15 @@ namespace PasswordValidation.Rules
             IHasAtLeastOneLetterRule hasAtLeastOneLetterRule,
             ILengthMinimumFiveMaximumTwelveRule lengthMinimumFiveMaximumTwelveRule,
             ILowercaseLettersOnlyRule lowercaseLettersOnlyRule,
-            INonSpecialCharactersRule nonSpecialCharactersRule)
+            INonSpecialCharactersRule nonSpecialCharactersRule,
+            INotFollowBySameSequenceOfCharactersRule notFollowBySameSequenceOfCharactersRule)
         {
             Add("ContainsNoDigit", hasAtLeastOneDigitRule);
             Add("ContainsNoLetter", hasAtLeastOneLetterRule);
             Add("LowercaseLetterOnly", lowercaseLettersOnlyRule);
             Add("LengthMinimumFiveMaximumTwelve", lengthMinimumFiveMaximumTwelveRule);
             Add("ContainsUnnecessaryCharacter", nonSpecialCharactersRule);
-            Add("NotFollowBySameSequenceOfCharacters", new Rule<string>(new NotFollowBySameSequenceOfCharacters(), "Password should not contain any sequence of characters"));
+            Add("NotFollowBySameSequenceOfCharacters", notFollowBySameSequenceOfCharactersRule);
         }
         
         // public PasswordValidator()

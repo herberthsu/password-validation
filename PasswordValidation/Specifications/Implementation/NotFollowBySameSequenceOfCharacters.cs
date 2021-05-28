@@ -3,7 +3,7 @@ using PasswordValidation.Specifications.Interfaces;
 
 namespace PasswordValidation.Specifications.Implementation
 {
-    public class NotFollowBySameSequenceOfCharacters : ISpecification<string>
+    public class NotFollowBySameSequenceOfCharacters : INotFollowBySameSequenceOfCharacters
     {
         public bool IsSatisfiedBy(string entity)
         {

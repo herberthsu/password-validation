@@ -3,7 +3,7 @@ using PasswordValidation.Specifications.Interfaces;
 
 namespace PasswordValidation.Specifications.Implementation
 {
-    public class HasAtLeastOneLetter : ISpecification<string>
+    public class HasAtLeastOneLetter : IHasAtLeastOneLetter
     {
         public bool IsSatisfiedBy(string entity)
         {

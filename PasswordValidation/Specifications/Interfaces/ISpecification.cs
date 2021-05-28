@@ -1,4 +1,4 @@
-﻿namespace PasswordValidation.Rules.Interfaces
+﻿namespace PasswordValidation.Specifications.Interfaces
 {
     public interface ISpecification<in T>
     {

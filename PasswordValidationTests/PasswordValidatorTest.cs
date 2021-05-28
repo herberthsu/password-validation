@@ -15,7 +15,8 @@ namespace PasswordValidationTests
         {
             _passwordValidator = new PasswordValidator(
                 new HasAtLeastOneDigitRule(new HasAtLeastOneDigit()),
-                new HasAtLeastOneLetterRule(new HasAtLeastOneLetter()));
+                new HasAtLeastOneLetterRule(new HasAtLeastOneLetter()),
+                new LengthMinimumFiveMaximumTwelveRule(new LengthMinimumFiveMaximumTwelve()));
         }
         
         [Fact]

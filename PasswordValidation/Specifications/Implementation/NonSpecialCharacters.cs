@@ -3,7 +3,7 @@ using PasswordValidation.Specifications.Interfaces;
 
 namespace PasswordValidation.Specifications.Implementation
 {
-    public class NonSpecialCharacters : ISpecification<string>
+    public class NonSpecialCharacters : INonSpecialCharacters
     {
         public bool IsSatisfiedBy(string entity)
         {

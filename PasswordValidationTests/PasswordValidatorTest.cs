@@ -17,7 +17,8 @@ namespace PasswordValidationTests
                 new HasAtLeastOneDigitRule(new HasAtLeastOneDigit()),
                 new HasAtLeastOneLetterRule(new HasAtLeastOneLetter()),
                 new LengthMinimumFiveMaximumTwelveRule(new LengthMinimumFiveMaximumTwelve()),
-                new LowercaseLettersOnlyRule(new LowercaseLettersOnly()));
+                new LowercaseLettersOnlyRule(new LowercaseLettersOnly()),
+                new NonSpecialCharactersRule(new NonSpecialCharacters()));
         }
         
         [Fact]

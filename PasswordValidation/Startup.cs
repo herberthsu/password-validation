@@ -38,11 +38,13 @@ namespace PasswordValidation
             services.AddTransient<IHasAtLeastOneDigit, HasAtLeastOneDigit>();
             services.AddTransient<IHasAtLeastOneLetter, HasAtLeastOneLetter>();
             services.AddTransient<ILengthMinimumFiveMaximumTwelve, LengthMinimumFiveMaximumTwelve>();
+            services.AddTransient<ILowercaseLetterOnly, LowercaseLettersOnly>();
 
             // Rules
             services.AddTransient<IHasAtLeastOneDigitRule, HasAtLeastOneDigitRule>();
             services.AddTransient<IHasAtLeastOneLetterRule, HasAtLeastOneLetterRule>();
             services.AddTransient<ILengthMinimumFiveMaximumTwelveRule, LengthMinimumFiveMaximumTwelveRule>();
+            services.AddTransient<ILowercaseLettersOnlyRule, LowercaseLettersOnlyRule>();
 
             // Validator
             services.AddTransient<IValidator<string>, PasswordValidator>();

@@ -1,4 +1,4 @@
-﻿using PasswordValidation.Rules.Interfaces;
+﻿using PasswordValidation.Specifications.Interfaces;
 
 namespace PasswordValidation.Specifications.Implementation
 {

@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using PasswordValidation.Rules.Interfaces;
 using PasswordValidation.Specifications.Implementation;
+using PasswordValidation.Specifications.Interfaces;
 using Xunit;
 
 namespace PasswordValidationTests

@@ -1,6 +1,6 @@
 ﻿using PasswordValidation.Rules.Interfaces;
 
-namespace PasswordValidation.Rules.Password
+namespace PasswordValidation.Specifications.Implementation
 {
     public class LengthMinimumFiveMaximumTwelve : ISpecification<string>
     {

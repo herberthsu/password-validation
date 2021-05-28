@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using PasswordValidation.Rules.Interfaces;
 
-namespace PasswordValidation.Rules.Password
+namespace PasswordValidation.Specifications.Implementation
 {
     public class NonSpecialCharacters : ISpecification<string>
     {

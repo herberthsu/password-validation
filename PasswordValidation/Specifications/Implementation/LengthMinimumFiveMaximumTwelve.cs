@@ -2,7 +2,7 @@
 
 namespace PasswordValidation.Specifications.Implementation
 {
-    public class LengthMinimumFiveMaximumTwelve : ISpecification<string>
+    public class LengthMinimumFiveMaximumTwelve : ILengthMinimumFiveMaximumTwelve
     {
         public bool IsSatisfiedBy(string entity)
         {

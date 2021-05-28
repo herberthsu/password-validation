@@ -5,10 +5,10 @@ namespace PasswordValidation.Rules.Implementations
 {
     public class LowercaseLettersOnlyRule : ILowercaseLettersOnlyRule
     {
-        private readonly ILowercaseLetterOnly _specification;
+        private readonly ILowercaseLettersOnly _specification;
         public string ErrorMessage => "Password should not contain any uppercase letter";
 
-        public LowercaseLettersOnlyRule(ILowercaseLetterOnly specification)
+        public LowercaseLettersOnlyRule(ILowercaseLettersOnly specification)
         {
             _specification = specification;
         }

@@ -1,6 +1,6 @@
 ﻿namespace PasswordValidation.Specifications.Interfaces
 {
-    public interface ILowercaseLetterOnly : ISpecification<string>
+    public interface ILowercaseLettersOnly : ISpecification<string>
     {
         
     }

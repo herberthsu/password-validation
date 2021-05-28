@@ -38,7 +38,7 @@ namespace PasswordValidation
             services.AddTransient<IHasAtLeastOneDigit, HasAtLeastOneDigit>();
             services.AddTransient<IHasAtLeastOneLetter, HasAtLeastOneLetter>();
             services.AddTransient<ILengthMinimumFiveMaximumTwelve, LengthMinimumFiveMaximumTwelve>();
-            services.AddTransient<ILowercaseLetterOnly, LowercaseLettersOnly>();
+            services.AddTransient<ILowercaseLettersOnly, LowercaseLettersOnly>();
 
             // Rules
             services.AddTransient<IHasAtLeastOneDigitRule, HasAtLeastOneDigitRule>();

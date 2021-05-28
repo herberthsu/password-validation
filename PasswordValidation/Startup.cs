@@ -40,6 +40,7 @@ namespace PasswordValidation
             services.AddTransient<ILengthMinimumFiveMaximumTwelve, LengthMinimumFiveMaximumTwelve>();
             services.AddTransient<ILowercaseLettersOnly, LowercaseLettersOnly>();
             services.AddTransient<INonSpecialCharacters, NonSpecialCharacters>();
+            services.AddTransient<INotFollowBySameSequenceOfCharacters, NotFollowBySameSequenceOfCharacters>();
 
             // Rules
             services.AddTransient<IHasAtLeastOneDigitRule, HasAtLeastOneDigitRule>();
@@ -47,6 +48,7 @@ namespace PasswordValidation
             services.AddTransient<ILengthMinimumFiveMaximumTwelveRule, LengthMinimumFiveMaximumTwelveRule>();
             services.AddTransient<ILowercaseLettersOnlyRule, LowercaseLettersOnlyRule>();
             services.AddTransient<INonSpecialCharactersRule, NonSpecialCharactersRule>();
+            services.AddTransient<INotFollowBySameSequenceOfCharactersRule, NotFollowBySameSequenceOfCharactersRule>();
 
             // Validator
             services.AddTransient<IValidator<string>, PasswordValidator>();

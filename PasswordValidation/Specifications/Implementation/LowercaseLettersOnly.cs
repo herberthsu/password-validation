@@ -3,7 +3,7 @@ using PasswordValidation.Specifications.Interfaces;
 
 namespace PasswordValidation.Specifications.Implementation
 {
-    public class LowercaseLettersOnly : ISpecification<string>
+    public class LowercaseLettersOnly : ILowercaseLetterOnly
     {
         public bool IsSatisfiedBy(string entity)
         {

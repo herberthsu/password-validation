@@ -7,6 +7,7 @@ namespace PasswordValidation.Rules.Implementations
     {
         private readonly INonSpecialCharacters _specification;
         public string ErrorMessage => "Password should not contain any non-digit and non-letter character";
+        public string ErrorType => "ContainsUnnecessaryCharacter";
 
         public NonSpecialCharactersRule(INonSpecialCharacters specification)
         {

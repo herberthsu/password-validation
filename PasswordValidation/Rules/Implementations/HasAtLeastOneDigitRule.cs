@@ -7,6 +7,7 @@ namespace PasswordValidation.Rules.Implementations
     {
         private readonly IHasAtLeastOneDigit _specification;
         public string ErrorMessage => "Password should contain at least 1 digit";
+        public string ErrorType => "ContainsNoDigit";
 
         public HasAtLeastOneDigitRule(IHasAtLeastOneDigit specification)
         {

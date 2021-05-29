@@ -7,6 +7,7 @@ namespace PasswordValidation.Rules.Implementations
     {
         private readonly INotFollowBySameSequenceOfCharacters _specification;
         public string ErrorMessage => "Password should not contain any sequence of characters";
+        public string ErrorType => "NotFollowBySameSequenceOfCharacters";
 
         public NotFollowBySameSequenceOfCharactersRule(INotFollowBySameSequenceOfCharacters specification)
         {

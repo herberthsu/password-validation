@@ -5,11 +5,11 @@ namespace PasswordValidation.Rules
 {
     public class Validator<TEntity> : IValidator<TEntity>
     {
-        private readonly Dictionary<string, IRule<TEntity>> _rules;
+        private readonly List<IRule<TEntity>> _rules;
 
         protected Validator()
         {
-            _rules = new Dictionary<string, IRule<TEntity>>();
+            _rules = new List<IRule<TEntity>>();
         }
         
         public ValidationResult Validate(TEntity entity)
@@ -17,15 +17,15 @@ namespace PasswordValidation.Rules
             var validation = new ValidationResult();
             foreach (var rule in _rules)
             {
-                if (!rule.Value.Validate(entity))
+                if (!rule.Validate(entity))
                 {
-                    validation.SetError(new ValidationError(rule.Key, rule.Value.ErrorMessage));
+                    validation.SetError(new ValidationError(rule.ErrorType, rule.ErrorMessage));
                 }
             }
 
             return validation;
         }
         
-        protected void Add(string type, IRule<TEntity> rule) => _rules.Add(type, rule);
+        protected void Add(IRule<TEntity> rule) => _rules.Add(rule);
     }
 }

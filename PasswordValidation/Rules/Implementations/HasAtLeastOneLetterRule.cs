@@ -7,6 +7,7 @@ namespace PasswordValidation.Rules.Implementations
     {
         private readonly IHasAtLeastOneLetter _specification;
         public string ErrorMessage => "Password should contain at least 1 letter";
+        public string ErrorType => "ContainsNoLetter";
 
         public HasAtLeastOneLetterRule(IHasAtLeastOneLetter specification)
         {

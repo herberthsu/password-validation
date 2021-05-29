@@ -11,12 +11,12 @@ namespace PasswordValidation.Rules
             INonSpecialCharactersRule nonSpecialCharactersRule,
             INotFollowBySameSequenceOfCharactersRule notFollowBySameSequenceOfCharactersRule)
         {
-            Add("ContainsNoDigit", hasAtLeastOneDigitRule);
-            Add("ContainsNoLetter", hasAtLeastOneLetterRule);
-            Add("LowercaseLetterOnly", lowercaseLettersOnlyRule);
-            Add("LengthMinimumFiveMaximumTwelve", lengthMinimumFiveMaximumTwelveRule);
-            Add("ContainsUnnecessaryCharacter", nonSpecialCharactersRule);
-            Add("NotFollowBySameSequenceOfCharacters", notFollowBySameSequenceOfCharactersRule);
+            Add(hasAtLeastOneDigitRule);
+            Add(hasAtLeastOneLetterRule);
+            Add(lowercaseLettersOnlyRule);
+            Add(lengthMinimumFiveMaximumTwelveRule);
+            Add(nonSpecialCharactersRule);
+            Add(notFollowBySameSequenceOfCharactersRule);
         }
     }
 }

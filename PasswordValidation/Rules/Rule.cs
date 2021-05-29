@@ -8,6 +8,7 @@ namespace PasswordValidation.Rules
         private readonly ISpecification<TEntity> _specification;
         
         public string ErrorMessage { get; }
+        public string ErrorType { get; }
 
         public Rule(ISpecification<TEntity> spec, string errorMessage)
         {

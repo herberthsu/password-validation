@@ -7,6 +7,7 @@ namespace PasswordValidation.Rules.Implementations
     {
         private readonly ILowercaseLettersOnly _specification;
         public string ErrorMessage => "Password should not contain any uppercase letter";
+        public string ErrorType => "LowercaseLetterOnly";
 
         public LowercaseLettersOnlyRule(ILowercaseLettersOnly specification)
         {
